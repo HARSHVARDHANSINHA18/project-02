@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/apiservice.service';
 
 @Component({
   selector: 'app-create-product',
@@ -16,12 +17,21 @@ export class CreateProductComponent {
     price: new FormControl(null,[Validators.required])
   });
 
+  constructor(public apiService:ApiService){}
   public submit(){
     if(this.form.invalid){
       alert('Form is Invalid !!');
       return;
     }
     console.log(this.form.value);
+    this.apiService
+    .addProducts(this.form.value).then(()=>{
+      console.log('Data Added Successfully'); 
+    })
+    .catch((err)=>{
+      console.log(err);
+      
+    })
   }
 
   public get name(): AbstractControl{

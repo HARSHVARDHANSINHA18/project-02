@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "learning-angular-firebas-d5d91": {
+      "hosting": {
+        "app": [
+          "learning-angular-firebas-d5d91"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "learning-angular-firebas-d5d91"
+  }
+}

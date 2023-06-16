@@ -5,6 +5,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CreateProductComponent } from './pages/dashboard/create-product/create-product.component';
+import { EditProductComponent } from './pages/dashboard/edit-product/edit-product.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'dashboard/create-product',
     component: CreateProductComponent,
+  },
+  {
+  path:'edit-product',
+  component:EditProductComponent
   }
 ];
 
