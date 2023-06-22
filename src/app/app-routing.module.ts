@@ -29,7 +29,7 @@ const routes: Routes = [
     component: CreateProductComponent,
   },
   {
-  path:'edit-product',
+  path:'dashboard/edit-product/:id',
   component:EditProductComponent
   }
 ];
